@@ -1,6 +1,9 @@
 # cotion
 노션 벤치마킹 프로젝트 입니다
 
+# install & running
+* TBD
+
 # Feature
 * 회원 관리 시스템 : 로그인, 회원가입, 탈퇴 등등
 * 그룹, 그룹 채팅 기능

@@ -1,73 +1,125 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-import { Layout, Menu, Breadcrumb  } from 'antd';
-import { ExclamationOutlined, CheckCircleFilled } from '@ant-design/icons'
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import { Layout, Avatar, Menu, Breadcrumb, Button } from 'antd';
+import Title from 'antd/lib/typography/Title';
+import SubMenu from 'antd/lib/menu/SubMenu';
+import Icon from '@ant-design/icons/lib/components/Icon';
 
-const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
   return (
     <div className="App">
+      <Layout>
+        <Header style={{ padding: 10 }}>
+          <Title style={{ float: 'left', color: 'white' }} level={3}>COTION</Title>
+          <Avatar style={{ float: 'right' }} icon='user' />
+        </Header>
+        <Layout>
+          <Sider>
+            <Menu
+              defaultSelectedKeys={['Dashboard']}
+              mode="inline"
+            >
+              <Menu.Item key='Dashboard'>
+                Dashboard
+            </Menu.Item>
+              <SubMenu
+                title={
+                  <span>
+                    <Icon type="mail" />
+                    <span>WORKSPACE</span>
+                  </span>
+                }
+              >
+                <SubMenu
+                title={
+                  <span>
+                    <Icon type="mail" />
+                    <span>TEAM 1</span>
+                  </span>
+                }
+              >
+                <Menu.ItemGroup key='AboutUS' title='서브메뉴 테스트'>
+                  <Menu.Item key='location1'> Programmer_Backend</Menu.Item>
+                  <Menu.Item key='location2'> Programmer_Frontend</Menu.Item>
+                </Menu.ItemGroup>
+              </SubMenu>
 
-<Layout>
-    <Header className="header">
-      <div className="logo" />
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
-      </Menu>
-    </Header>
-    <Layout>
-      <Sider width={200} className="site-layout-background">
-        <Menu
-          mode="inline"
-          defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
-          style={{ height: '100%', borderRight: 0 }}
-        >
-          <SubMenu key="sub1" icon={<UserOutlined />} title="subnav 1">
-            <Menu.Item key="1">option1</Menu.Item>
-            <Menu.Item key="2">option2</Menu.Item>
-            <Menu.Item key="3">option3</Menu.Item>
-            <Menu.Item key="4">option4</Menu.Item>
-          </SubMenu>
-          <SubMenu key="sub2" icon={<LaptopOutlined />} title="subnav 2">
-            <Menu.Item key="5">option5</Menu.Item>
-            <Menu.Item key="6">option6</Menu.Item>
-            <Menu.Item key="7">option7</Menu.Item>
-            <Menu.Item key="8">option8</Menu.Item>
-          </SubMenu>
-          <SubMenu key="sub3" icon={<NotificationOutlined />} title="subnav 3">
-            <Menu.Item key="9">option9</Menu.Item>
-            <Menu.Item key="10">option10</Menu.Item>
-            <Menu.Item key="11">option11</Menu.Item>
-            <Menu.Item key="12">option12</Menu.Item>
-          </SubMenu>
-        </Menu>
-      </Sider>
-      <Layout style={{ padding: '0 24px 24px' }}>
-        <Breadcrumb style={{ margin: '16px 0' }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
-        <Content
-          className="site-layout-background"
-          style={{
-            padding: 24,
-            margin: 0,
-            minHeight: 280,
-          }}
-        >
-          Content
-        </Content>
+              <SubMenu
+                title={
+                  <span>
+                    <Icon type="mail" />
+                    <span>TEAM 1</span>
+                  </span>
+                }
+              >
+                <Menu.ItemGroup key='AboutUS' title='서브메뉴 테스트'>
+                  <Menu.Item key='location1'> Programmer_Backend</Menu.Item>
+                  <Menu.Item key='location2'> Programmer_Frontend</Menu.Item>
+                </Menu.ItemGroup>
+              </SubMenu>
+
+
+              <SubMenu
+                title={
+                  <span>
+                    <Icon type="mail" />
+                    <span>TEAM 1</span>
+                  </span>
+                }
+              >
+                <Menu.ItemGroup key='AboutUS' title='서브메뉴 테스트'>
+                  <Menu.Item key='location1'> Programmer_Backend</Menu.Item>
+                  <Menu.Item key='location2'> Programmer_Frontend</Menu.Item>
+                </Menu.ItemGroup>
+              </SubMenu>
+
+
+              <SubMenu
+                title={
+                  <span>
+                    <Icon type="mail" />
+                    <span>TEAM 1</span>
+                  </span>
+                }
+              >
+                <Menu.ItemGroup key='AboutUS' title='서브메뉴 테스트'>
+                  <Menu.Item key='location1'> Programmer_Backend</Menu.Item>
+                  <Menu.Item key='location2'> Programmer_Frontend</Menu.Item>
+                </Menu.ItemGroup>
+              </SubMenu>
+
+
+              <SubMenu
+                title={
+                  <span>
+                    <Icon type="mail" />
+                    <span>TEAM 1</span>
+                  </span>
+                }
+              >
+                <Menu.ItemGroup key='AboutUS' title='서브메뉴 테스트'>
+                  <Menu.Item key='location1'> Programmer_Backend</Menu.Item>
+                  <Menu.Item key='location2'> Programmer_Frontend</Menu.Item>
+                </Menu.ItemGroup>
+              </SubMenu>
+
+
+              </SubMenu>
+            </Menu>
+          </Sider>
+          <Layout>
+            <Content style={{ padding: '0 50px' }}>
+              <Breadcrumb style={{ margin: '16px 0' }}>
+                <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
+              </Breadcrumb>
+
+            </Content>
+            <Footer style={{ textAlign: 'center' }}>Ant Design Layout example Created by Shrideep</Footer>
+          </Layout>
+        </Layout>
       </Layout>
-    </Layout>
-  </Layout>
     </div>
   );
 }

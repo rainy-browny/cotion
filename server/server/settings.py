@@ -25,7 +25,7 @@ SECRET_KEY = '_qe1yn)uy7og*x1^vuwf86-e)e-*n&9gs=e$x^d@p^-8&d(uv&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jeonghan.iptime.org']
 
 
 # Application definition
